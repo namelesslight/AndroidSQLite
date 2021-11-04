@@ -4,7 +4,7 @@
 >
 > 官网下载android studio
 >
-> ([Download Android Studio and SDK tools  | Android Developers (google.cn)](https://developer.android.google.cn/studio))
+> [Download Android Studio and SDK tools  | Android Developers (google.cn)](https://developer.android.google.cn/studio)
 
 ## 项目的创建
 
