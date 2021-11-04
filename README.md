@@ -699,4 +699,4 @@ public class DataBaseProvider extends ContentProvider {
 ```
 
 然后其他项目就可以访问你的本地数据库了
-测试provider的项目目录 https://github.com/namelesslight/TestAndroidProvider
+测试provider的项目 https://github.com/namelesslight/TestAndroidProvider
