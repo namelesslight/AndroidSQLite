@@ -2,6 +2,11 @@ package com.example.androidsqlite.pojo;
 
 import org.litepal.crud.LitePalSupport;
 
+/**
+ * 数据表接收类
+ * @author ZCL
+ * ps:此处继承的LitePalSupport是需要使用litepal框架时必须继承的，正常使用sqlite并不需要
+ */
 public class Book extends LitePalSupport {
     private int id;
     private String name;

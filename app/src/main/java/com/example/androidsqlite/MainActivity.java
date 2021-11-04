@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         deleteBtn=findViewById(R.id.deleteBtn);
         queryBtn=findViewById(R.id.queryBtn);
         dbHelper=new MyDatabaseHelper(this,"Library.db",null,1);
+        //创建数据库
         createBtn.setOnClickListener(view -> dbHelper.getWritableDatabase());
+        //添加数据
         insertBtn.setOnClickListener(view -> {
             SQLiteDatabase db=dbHelper.getWritableDatabase();
             ContentValues value=new ContentValues();
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             db.insert("Book",null,value);
             Toast.makeText(this, "insert success", Toast.LENGTH_SHORT).show();
         });
+        //更新数据
         updateBtn.setOnClickListener(view -> {
             SQLiteDatabase db=dbHelper.getWritableDatabase();
             ContentValues values=new ContentValues();
@@ -58,12 +61,13 @@ public class MainActivity extends AppCompatActivity {
                     ,new String[]{"NEVER GONNA GIVE YOU UP"});
             Log.d("update","success");
         });
-
+        //删除数据
         deleteBtn.setOnClickListener(view -> {
             SQLiteDatabase db=dbHelper.getWritableDatabase();
             db.delete("Book",null,null);
             Log.d("delete","success");
         });
+        //查询数据
         queryBtn.setOnClickListener(view -> {
             SQLiteDatabase db=dbHelper.getWritableDatabase();
             Cursor cursor=db.query("book",null,null,null,null,null,null);

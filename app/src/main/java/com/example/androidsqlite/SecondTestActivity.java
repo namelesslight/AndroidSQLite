@@ -17,6 +17,10 @@ import org.litepal.tablemanager.Connector;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author ZCL
+ * 此处为使用litepal框架的数据增删改查
+ */
 public class SecondTestActivity extends AppCompatActivity {
     Button createBtn;
     Button insertBtn;
