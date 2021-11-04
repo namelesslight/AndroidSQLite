@@ -4,7 +4,7 @@
 >
 > 官网下载android studio
 >
-> [android studio下载地址]([Download Android Studio and SDK tools  | Android Developers (google.cn)](https://developer.android.google.cn/studio))
+> ([Download Android Studio and SDK tools  | Android Developers (google.cn)](https://developer.android.google.cn/studio))
 
 ## 项目的创建
 
@@ -699,3 +699,4 @@ public class DataBaseProvider extends ContentProvider {
 ```
 
 然后其他项目就可以访问你的本地数据库了
+测试provider的项目目录 https://github.com/namelesslight/TestAndroidProvider
