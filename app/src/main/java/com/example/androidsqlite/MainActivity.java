@@ -6,13 +6,12 @@ import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.androidsqlite.databasehelper.MyDatabaseHelper;
+import com.example.androidsqlite.helper.MyDatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
     Button createBtn;
