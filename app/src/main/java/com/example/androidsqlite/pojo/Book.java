@@ -3,20 +3,11 @@ package com.example.androidsqlite.pojo;
 import org.litepal.crud.LitePalSupport;
 
 public class Book extends LitePalSupport {
-    private int press;
     private int id;
     private String name;
     private String author;
     private double price;
     private int pages;
-
-    public int getPress() {
-        return press;
-    }
-
-    public void setPress(int press) {
-        this.press = press;
-    }
 
     public int getId() {
         return id;

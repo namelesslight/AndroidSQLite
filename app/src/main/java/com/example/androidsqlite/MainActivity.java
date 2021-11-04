@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         updateBtn=findViewById(R.id.updateBtn);
         deleteBtn=findViewById(R.id.deleteBtn);
         queryBtn=findViewById(R.id.queryBtn);
-        dbHelper=new MyDatabaseHelper(this,"BookStore.db",null,3);
+        dbHelper=new MyDatabaseHelper(this,"Library.db",null,1);
         createBtn.setOnClickListener(view -> dbHelper.getWritableDatabase());
         insertBtn.setOnClickListener(view -> {
             SQLiteDatabase db=dbHelper.getWritableDatabase();
@@ -65,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
         });
         queryBtn.setOnClickListener(view -> {
             SQLiteDatabase db=dbHelper.getWritableDatabase();
-            Cursor cursor=db.query("Book",null,null,null,null,null,null);
+            Cursor cursor=db.query("book",null,null,null,null,null,null);
             if (cursor.moveToFirst()){
-                do{
+                while (cursor.moveToNext()){
                     @SuppressLint("Range") String name =cursor.getString(cursor.getColumnIndex("name"));
                     @SuppressLint("Range") String author =cursor.getString(cursor.getColumnIndex("author"));
                     @SuppressLint("Range") int pages =cursor.getInt(cursor.getColumnIndex("pages"));
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("MainActivity","book author is"+author);
                     Log.d("MainActivity","book pages is"+pages);
                     Log.d("MainActivity","book price is"+price);
-                }while (cursor.moveToNext());
+                }
             }
             cursor.close();
         });
