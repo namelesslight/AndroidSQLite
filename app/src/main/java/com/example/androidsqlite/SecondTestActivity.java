@@ -11,10 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.androidsqlite.pojo.Book;
 
 import org.litepal.LitePal;
-import org.litepal.crud.LitePalSupport;
 import org.litepal.tablemanager.Connector;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
