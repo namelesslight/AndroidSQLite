@@ -697,6 +697,6 @@ public class DataBaseProvider extends ContentProvider {
 
 </manifest>
 ```
+在AndroidManifest.xml中注册后就可以在其他应用中访问该应用的本地数据库
 
-然后其他项目就可以访问你的本地数据库了
-测试provider的项目 https://github.com/namelesslight/TestAndroidProvider
+测试该应用数据分享的项目 https://github.com/namelesslight/TestAndroidProvider
