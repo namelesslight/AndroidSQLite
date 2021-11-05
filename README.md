@@ -13,7 +13,7 @@
 > 1. Android使用sqlite实现本地缓存
 > 2. litepal的使用
 >
-> 3. 使用provider内容提供器来让其他可调用本项目的sqlite的本地数据
+> 3. 使用provider内容提供器来让其他应用可调用本项目的sqlite的本地数据
 
 ### 一、sqlite的使用
 
